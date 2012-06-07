@@ -1,0 +1,46 @@
+# J-switch
+If you're reading this you choose my switcher framework for Wirecast! Congrats! The idea of this switcher framework for Wirecast is to emulate the control scheme of more expensive integrated production systems. The other benefit to this is that it makes Wirecast work much more like a hardware video switcher. Features include being able to hot punch to any input without disrupting preview, preview/program flip and sending graphics straight to program.
+
+# Getting Started:
+The switcher framework requires that you have:
+The Korg USB Midi driver (somewhat obvious)
+Korg Kontrol Editor [download][2]
+Midipipe [download][3]
+Wirecast (Yeah, really obvious)
+
+# Setup
+1. Write the scene data to the Korg Nano Kontrol. Open Kontrol Editor and open the provided .nktrl2_data file. Then from the menu just write the scene data.
+
+2. Open the .mipi file with Midipipe.
+
+3. Open Wirecast.
+
+#Naming your shots
+The naming conventions are as follows:
+Camera 1 through 8 is "cam" and then the channel number, for example - "cam1". This should be on master layer 3
+
+Double box shots are set up on master layer 3. The name for these should be like camera, but with -db added on. For example "cam1-db"
+
+CGs are set up on master layer 3. They should be named like l3rd-1, in place of 1 put the number.
+
+Shots on the FX row are on master layer 4. The naming convention is camX-fx, example - "cam1-fx"
+
+Using the switcher
+To help you with this, see the included diagram.png included.
+
+#Notes
+The slider's will bring up the lower third using whatever transition is selected in the 3rd
+transition selector (I'd recommend smooth or dissolve)
+
+At first you my notice stranger behaviour. This is due to memory not being initialised. To fix this, switch
+between cameras on preview, live and fx and everything will start working properly.
+
+This switcher framework is based on the works of that [other framework][1], by [@randallb][5].
+
+Questions? Hit me on twitter: [@joedemax][4]
+
+[1]: https://github.com/vidpresso/Switcher-framework-for-Wirecast
+[2]: http://www.korg.co.uk/downloads/nano2/data/KontrolEditor_0120_MAC.zip)
+[3]: http://www.macupdate.com/app/mac/10541/midipipe
+[4]: http://twitter.com/joedemax
+[5]: https://twitter.com/randallb
